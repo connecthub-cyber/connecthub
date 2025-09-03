@@ -7,14 +7,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    outputFileTracingExcludes: {
-      "**": [
-        "./node_modules/@prisma/client",
-        "./node_modules/.prisma",
-      ],
-    },
-  },
 };
 
 module.exports = nextConfig;
