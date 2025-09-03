@@ -70,3 +70,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after removing explicit prisma generate from CI/CD -->
 
+
+
+<!-- Trigger new deployment after re-adding explicit prisma generate to CI/CD -->
+
