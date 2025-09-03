@@ -78,3 +78,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after adding outputFileTracingExcludes to next.config.js -->
 
+
+
+<!-- Trigger new deployment after changing to npx prisma generate in CI/CD -->
+
