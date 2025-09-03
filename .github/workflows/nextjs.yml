@@ -9,25 +9,12 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: |
-          npm install
-          npm install prisma --save-dev
-
-      - name: Build Next.js app
-        run: npm run build
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20

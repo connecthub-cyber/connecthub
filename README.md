@@ -90,3 +90,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after modifying nextjs.yml to install prisma as dev dependency and remove explicit prisma generate -->
 
+
+
+<!-- Trigger new deployment after simplifying CI/CD workflow -->
+
