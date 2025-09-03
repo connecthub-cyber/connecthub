@@ -8,14 +8,14 @@ type Params = {
   };
 };
 
-export async function GET(req: NextRequest, context: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth();
     if (!session || session.user?.role !== "ADMIN") {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
-        const { id } = context.params;
+    const { id } = params;
 
     const event = await prisma.event.findUnique({
       where: {
@@ -34,7 +34,7 @@ export async function GET(req: NextRequest, context: { params: { id: string } })
   }
 }
 
-export async function PUT(req: NextRequest, context: { params: { id: string } }) {
+export async function PUT(req: NextRequest, { params }: Params) {
   try {
     const session = await auth();
     if (!session || session.user?.role !== "ADMIN") {
@@ -44,7 +44,7 @@ export async function PUT(req: NextRequest, context: { params: { id: string } })
     const body = await req.json();
     const { title, description, startAt, endAt, location, price, capacity, tags, image, status } = body;
 
-    const { id } = context.params;
+    const { id } = params;
 
     const updatedEvent = await prisma.event.update({
       where: {
@@ -71,14 +71,14 @@ export async function PUT(req: NextRequest, context: { params: { id: string } })
   }
 }
 
-export async function DELETE(req: NextRequest, context: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, { params }: Params) {
   try {
     const session = await auth();
     if (!session || session.user?.role !== "ADMIN") {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
-    const { id } = context.params;
+    const { id } = params;
 
     await prisma.event.delete({
       where: {

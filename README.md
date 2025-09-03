@@ -42,3 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after re-adding output: "export" -->
 
+
+
+<!-- Trigger new deployment after fixing typing issues -->
+
