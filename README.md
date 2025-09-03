@@ -58,3 +58,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after adding npm install prisma to CI/CD -->
 
+
+
+<!-- Trigger new deployment after Vercel environment variables setup -->
+
