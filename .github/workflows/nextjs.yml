@@ -26,7 +26,6 @@ jobs:
 
       - name: Build Next.js app
         run: |
-          npx prisma generate
           npm run build
 
       - name: Deploy to Vercel
