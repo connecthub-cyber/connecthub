@@ -50,3 +50,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after reverting route.ts and disabling TS check -->
 
+
+
+<!-- Trigger new deployment after adding prisma generate to CI/CD -->
+
