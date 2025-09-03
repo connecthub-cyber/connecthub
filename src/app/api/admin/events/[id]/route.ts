@@ -8,18 +8,16 @@ type Params = {
   };
 };
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: Request, { params }: { params: { id: string } }) {
   try {
     const session = await auth();
     if (!session || session.user?.role !== "ADMIN") {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
-    const { id } = params;
-
     const event = await prisma.event.findUnique({
       where: {
-        id: id,
+        id: params.id,
       },
     });
 
@@ -44,11 +42,9 @@ export async function PUT(req: NextRequest, { params }: Params) {
     const body = await req.json();
     const { title, description, startAt, endAt, location, price, capacity, tags, image, status } = body;
 
-    const { id } = params;
-
     const updatedEvent = await prisma.event.update({
       where: {
-        id: id,
+        id: params.id,
       },
       data: {
         title,
@@ -78,11 +74,9 @@ export async function DELETE(req: NextRequest, { params }: Params) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
-    const { id } = params;
-
     await prisma.event.delete({
       where: {
-        id: id,
+        id: params.id,
       },
     });
 
