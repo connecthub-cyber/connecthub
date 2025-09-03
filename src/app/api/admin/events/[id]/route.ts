@@ -8,7 +8,7 @@ type Params = {
   };
 };
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: any) {
   try {
     const session = await auth();
     if (!session || session.user?.role !== "ADMIN") {
