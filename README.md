@@ -94,3 +94,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- Trigger new deployment after simplifying CI/CD workflow -->
 
+
+
+<!-- Trigger new deployment after updating VERCEL_PROJECT_ID in CI/CD -->
+
