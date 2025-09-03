@@ -20,7 +20,7 @@ jobs:
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ivapps-projects
+          vercel-org-id: team_gNc1VymUojLjeWc5UgLrdC2q
           vercel-project-id: prj_uyQjXnrSRjS86W5HUhWDvWAFhxKZ
           vercel-args: '--prod'
 
